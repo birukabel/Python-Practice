@@ -25,6 +25,7 @@ class ProgrammingFunctions:
                     counter = counter + 1
         return returnedValue
 
+    #counter char frequency in a string
     def charfrequency(self, s: str) -> None:
         diccharCount={}
         for i in s:
@@ -48,6 +49,7 @@ class ProgrammingFunctions:
                         if item2 not in lsVisited:
                             lsVisited.append(item2)
 
+    #find duplicates in list
     def findDuplicates(self, nums: [int]) -> [int]:
         # lsVisited = []
         duplicates = []
@@ -56,3 +58,57 @@ class ProgrammingFunctions:
                 if nums.count(item) > 1:
                     duplicates.append(item)
         return duplicates
+
+    def productorsum(self, num1: int, num2: int) -> int:
+        if num1 * num2 <= 1000:
+            return num1 * num2
+        else:
+            return num1 + num2
+
+    #calculate square of user input
+    def calculate_square_number(self) -> None:
+        x = input("please enter an integer number")
+        print(f'Square of the number = {pow(int(x),2)}')
+
+    #sum of current and previous number from 1 to 10
+    def print_current_previous_sum(self) -> None:
+        for i in range(1, 11):
+            previous = i - 1
+            print(f'Current number:{i} previous number {previous} thier sum {previous + i}')
+
+    # print characters with even index in a tring using enumerate
+    def print_char_even_index(self, s: str) -> None:
+        for idx, item in enumerate(s):
+            if idx % 2 == 0:
+                print(f'character at even index:{item}')
+
+    #print characters with even index in a tring using slice
+    def print_char_even_index_slicing(self, s: str) -> None:
+        print('Print chars at even index using slicing')
+        for item in s[0::2]:
+            print(f'character at even index:{item}')
+
+    #validate user input
+    def check_user_input(self, s: str) -> None:
+        print(type(s))
+        try:
+            val = float(s)
+            print('input is float')
+        except ValueError:
+            print('Value is not float')
+            try:
+                val = int(s)
+                print('value is int')
+            except ValueError:
+                print('Value is neither float or int')
+
+
+    #Remove first n characters from a string
+    def remove_chars(self,s: str, length: int) -> str:
+        if length < len(s):
+            return  s.replace(s[0:length],'')
+        return ''
+
+
+
+

@@ -124,6 +124,13 @@ def print_hi(name):
     duplicates = ins.findDuplicates(['a', 'b', 'c', 'a', 'b'])
     print(duplicates)
 
+    ins.calculate_square_number()
+    ins.print_current_previous_sum()
+    ins.print_char_even_index('Biruk Abel Taffese')
+    ins.check_user_input('56')
+    ins.print_char_even_index_slicing('Biruk Abel Taffese')
+    print(ins.remove_chars('Biruk', 2))
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

@@ -131,6 +131,30 @@ def print_hi(name):
     ins.print_char_even_index_slicing('Biruk Abel Taffese')
     print(ins.remove_chars('Biruk', 2))
 
+    from Exercises2 import  Exercises2 as exer
+    ex = exer()
+    print(ex.reverse_each_word_string('Biruk is a programming gig'))
+    print('Biruk is a programming gig'[::-1])
+    print(ex.reverse_each_word_string_slicing('Biruk is a programming gig'))
+    print(ex.remove_items_from_list([10,20,30,40,50,60,70,80,90],40))
+    print(ex.reverse_dictionary_mapping({'A': 65, 'B': 66, 'C': 67, 'D': 68}))
+    print(ex.remove_duplicate_items_fromlist([10, 20, 60, 30, 20, 40, 30, 60, 70, 80]))
+    print(ex.keep_duplicates_inlist([10, 20, 60, 30, 20, 40, 30, 60, 70, 80]))
+    print(ex.remove_duplicate_using_collec([10, 20, 60, 30, 20, 40, 30, 60, 70, 80]))
+    print(ex.filter_dic_bylist({'A': 65, 'B': 66, 'C': 67, 'D': 68, 'E': 69, 'F': 70}, ['A', 'C', 'F']))
+
+    print(ex.doubleNumber(3))
+    print(ex.mapDoubleUsingLambda([1,2,3]))
+    print(ex.mapDoubleUsingFunction([1,2,3]))
+    print(ex.filterEvensFromListUsingLambda([1,2,3,4,5,6]))
+    print(ex.filterEvensFromListUsingUserDefinedFunctions([1, 2, 3, 4, 5, 6]))
+    print(ex.reduceUsingLambdaToGetSum([('Biruk',80),('Abel',120)]))
+    print(ex.reduceUsingFunctionToGetSum([('Biruk',80),('Abel',120)]))
+    numbers = [1, 2, 3, 4]
+    result = map(ex.addition, numbers)
+    print(result)
+    print(callable())
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

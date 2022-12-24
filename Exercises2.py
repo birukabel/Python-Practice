@@ -65,41 +65,31 @@ class Exercises2:
         dicreturn = {key: dic[key] for key in li}
         return  dicreturn
 
-    def doubleNumber(self, n: int)-> int:
+    def doubleNumber(self, n: int) -> int:
         return n*2
 
     #function to double each element of a list using lambda function
-    def mapDoubleUsingLambda(self,li: list) -> []:
+    def mapDoubleUsingLambda(self,li: []) -> []:
         return map(lambda n: n*2, li)
 
     # function to double each element of a list using user deifined function
-    def mapDoubleUsingFunction(self,li: list) -> []:
-        return map(Exercises2.doubleNumber, li)
+    def mapDoubleUsingFunction(self,li: []) -> []:
+        return map(self.doubleNumber, li)
 
     def isEven(self, n: int) -> bool:
         return  n % 2 == 0
 
     # function to filer and return Even numbers from list using filter function
-    def filterEvensFromListUsingLambda(self, li: list) -> []:
+    def filterEvensFromListUsingLambda(self, li: []) -> []:
         return  filter(lambda n: n%2==0,li)
 
     #function to filer and return Even numbers from list using user defined function
-    def filterEvensFromListUsingUserDefinedFunctions(self,li:list) -> []:
-        return  filter(Exercises2.isEven,li)
-
-    def sumOfElements(self,ls: list)->int:
-        sum = 0
-        for item in ls:
-            sum += item[1]
-        return  sum
+    def filterEvensFromListUsingUserDefinedFunctions(self,li:[]) -> []:
+        return  filter(self.isEven,li)
 
     #function to get sum of elements in a tuple using lambda
-    def reduceUsingLambdaToGetSum(self, tup: tuple)->int:
+    def reduceUsingLambdaToGetSum(self, tup: [()])->int:
         return  reduce(lambda a, b: a[1]+b[1],tup)
-
-    # function to get sum of elements in a tuple using user defined function
-    def reduceUsingFunctionToGetSum(self,tup: tuple)->int:
-        return  reduce(Exercises2.sumOfElements,tup)
 
     def addition(self,n: int)->int:
         return n + n

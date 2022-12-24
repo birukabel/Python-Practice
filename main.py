@@ -45,12 +45,12 @@ def print_hi(name):
 
     print(4**3)
 
-    list = [1]
-    list.append(2)
-    print(list[:])
-    list[:] = []
+    lis = [1]
+    lis.append(2)
+    print(lis[:])
+    lis[:] = []
 
-    print(list)
+    print(lis)
     x = [squares, [36, 49, 64, 81, 100]]
     print(x)
     print(x[0])
@@ -144,16 +144,57 @@ def print_hi(name):
     print(ex.filter_dic_bylist({'A': 65, 'B': 66, 'C': 67, 'D': 68, 'E': 69, 'F': 70}, ['A', 'C', 'F']))
 
     print(ex.doubleNumber(3))
-    print(ex.mapDoubleUsingLambda([1,2,3]))
-    print(ex.mapDoubleUsingFunction([1,2,3]))
-    print(ex.filterEvensFromListUsingLambda([1,2,3,4,5,6]))
-    print(ex.filterEvensFromListUsingUserDefinedFunctions([1, 2, 3, 4, 5, 6]))
+    print(list(ex.mapDoubleUsingLambda([1,2,3])))
+    print(list(map(ex.doubleNumber,[1,2,3])))
+    re1 = ex.mapDoubleUsingFunction([1,2,3])
+    print(list(re1))
+    print(ex.mapDoubleUsingFunction.__annotations__)
+    print(list(ex.filterEvensFromListUsingLambda([1,2,3,4,5,6])))
+    print(list(ex.filterEvensFromListUsingUserDefinedFunctions([1, 2, 3, 4, 5, 6])))
     print(ex.reduceUsingLambdaToGetSum([('Biruk',80),('Abel',120)]))
-    print(ex.reduceUsingFunctionToGetSum([('Biruk',80),('Abel',120)]))
+
+    data = [(1, 'sravan'), (2, 'ojaswi'), (3, 'bobby'), (4, 'rohith'), (5, 'gnanesh')]
+    for tu in data:
+        print(tu[1])
     numbers = [1, 2, 3, 4]
     result = map(ex.addition, numbers)
-    print(result)
-    print(callable())
+    print(list(result))
+    print(callable(list))
+    print(type(result))
+    print(isinstance(result,map))
+
+    from Exercises3 import Exercises3 as ex3
+    newEx = ex3()
+    print(newEx.generateRandom(['biruk','abel','taffese']))
+
+    print([2,6,6,5].sort())
+    print(newEx.sortByThirdWordAndSecondCharcter(['when in rome', 'what goes around comes around', 'all is fair in love and war']))
+
+    from collections import  namedtuple
+
+    Runner = namedtuple('Runner', 'bibnumber duration')
+
+    runners = []
+
+    runners.append(Runner('2528567', 1500))
+    runners.append(Runner('7575234', 1420))
+    runners.append(Runner('2666234', 1600))
+    runners.append(Runner('2425234', 1490))
+    runners.append(Runner('1235234', 1620))
+    # Thousands and Thousands of entries later...
+    runners.append(Runner('2526674', 1906))
+
+    print(newEx.getTopFiveRunnersUsingSort(runners))
+    print(newEx.getTopFiveRunnersUsingSorted(runners))
+
+    print(newEx.findAverageMeanOfList([1,5,8,9,10]))
+    print(newEx.findAverageUsingSumNLen([1,5,8,9,10]))
+    print(newEx.findAverageUSingReduceNLambda([1,5,8,9,10]))
+    print(newEx.findAverageUsingOperatorAdd([1,5,8,9,10]))
+    print(newEx.findAverageUsingNumpy([1,5,8,9,10]))
+    print(newEx.convertStringToLower('Biruk'))
+    print(newEx.convertStringToUpper('Biruk'))
+    print(newEx.captializeAString('Biruk'))
 
 
 # Press the green button in the gutter to run the script.
